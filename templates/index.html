@@ -1,0 +1,143 @@
+
+
+<html>
+
+<style>
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+div {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+input[type=text]:focus {
+  background-color: lightblue;
+  border: 3px solid #555;
+}
+</style>
+<body>
+    <h1>Income Prediction Form</h1>
+
+<div>
+  <form action="/result" method="POST">
+    <label for="age">Age</label>
+    <input type="text" id="age" name="age">
+    <br>
+    <label for="workclass">Working Class</label>
+    <select id="workclass" name="workclass">
+      <option value="0">Federal-gov</option>
+      <option value="1">Local-gov</option>
+      <option value="2">Never-worked</option>
+      <option value="3">Private</option>
+      <option value="4">Self-emp-inc</option>
+      <option value="5">Self-emp-not-inc</option>
+      <option value="6">State Government</option>
+      <option value="7">Volunteer</option>
+    </select>
+    <br>
+    <label for="education">Education</label>
+    <select id="education" name="education">
+      <option value="0">School</option>
+     <option value="5">High School Graduate</option>
+     <option value="7">Professional School</option>
+      <option value="1">Academic Associates</option>
+      <option value="2">Vocational Associates</option>
+      <option value="8">College</option>
+      <option value="3">Bachelors</option>
+      <option value="6">Masters</option>
+      <option value="4">Doctorate</option>
+
+
+    </select>
+    <br>
+    <label for="marital-status">Marital Status</label>
+    <select id="marital-status" name="marital-status">
+     <option value="1">Married</option>
+      <option value="0">Divorced</option>
+      <option value="2">Not married</option>
+    </select>
+    <br>
+    <label for="occupation">Occupation</label>
+    <select id="occupation" name="occupation">
+      <option value="0">Administration</option>
+      <option value="1">Military</option>
+      <option value="2">Repairs</option>
+      <option value="3">Executive</option>
+      <option value="4">Agriculture</option>
+      <option value="5">Cleaners</option>
+      <option value="6">Operations</option>
+      <option value="8">Private Service</option>
+      <option value="9">Professional Specialty</option>
+      <option value="10">Protective Service</option>
+      <option value="11">Sales</option>
+      <option value="12">Tech Support</option>
+      <option value="13">Transport</option>
+    <option value="7">Other</option>
+    </select>
+    <br>
+    <label for="relationship">Relationship</label>
+    <select id="relationship" name="relationship">
+      <option value="0">Husband</option>
+      <option value="5">Wife</option>
+      <option value="3">Child</option>
+      <option value="4">Unmarried</option>
+      <option value="1">Not in family</option>
+      <option value="2">Other</option>
+
+    </select>
+    <br>
+    <label for="race">Race</label>
+    <select id="race" name="race">
+      <option value="0">Other</option>
+      <option value="1">White</option>
+    </select>
+    <br>
+    <label for="gender">Gender</label>
+    <select id="gender" name="gender">
+      <option value="0">Female</option>
+      <option value="1">Male</option>
+    </select>
+    <br>
+    <label for="capital-gain">Capital Gain </label>
+    <input type="text" id="capital-gain" name="capital-gain">Between:[0-99999]
+    <br>
+    <label for="capital-loss">Capital Loss </label>
+    <input type="text" id="capital-loss" name="capital-loss">Between:[0-4356]
+    <br>
+    <label for="hours-per-week">Hours per Week </label>
+    <input type="text" id="hours-per-week" name="hours-per-week">Between:[1-99]
+    <br>
+    <label for="native-country">Native Country</label>
+    <select id="native-country" name="native-country">
+      <option value="1">United States</option>
+      <option value="0">Other</option>
+    </select>
+    <br>
+    <input type="submit" value="Submit">
+  </form>
+</div>
+</body>
+</html>
