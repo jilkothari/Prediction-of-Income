@@ -1,9 +1,29 @@
-
-
 <html>
 
 <style>
-input[type=text], select {
+.header {
+ 
+  text-align: center;
+  color: white;
+  font-size: 30px;
+}
+form {
+    margin: auto;
+    width: 35%;
+}
+label {
+  font-size: 20px;
+font-family: "Lucida Console", Courier, monospace;
+font-style: italic;
+font-weight: bold;
+}
+.result {
+    margin: auto;
+    width: 35%;
+    border: 1px solid #ccc;
+}
+
+input[type=number], select {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -32,28 +52,36 @@ div {
   border-radius: 5px;
   background-color: #f2f2f2;
   padding: 20px;
+  background-image: url('background.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
-input[type=text]:focus {
+
+input[type=number]:focus {
   background-color: lightblue;
   border: 3px solid #555;
 }
 </style>
 <body>
-    <h1>Income Prediction Form</h1>
-
+<div class="header">
+    <h1>Predict Your Income</h1>
+</div>
 <div>
+
   <form action="/result" method="POST">
+
     <label for="age">Age</label>
-    <input type="text" id="age" name="age">
+    <input type="number" id="age" name="age" required min="1" max="100">
     <br>
     <label for="workclass">Working Class</label>
     <select id="workclass" name="workclass">
-      <option value="0">Federal-gov</option>
-      <option value="1">Local-gov</option>
-      <option value="2">Never-worked</option>
+      <option value="0">Federal Government</option>
+      <option value="1">Local Government</option>
+      <option value="2">Never Worked</option>
       <option value="3">Private</option>
-      <option value="4">Self-emp-inc</option>
-      <option value="5">Self-emp-not-inc</option>
+      <option value="4">Self Employeed Inc</option>
+      <option value="5">Self Employeed Non Inc</option>
       <option value="6">State Government</option>
       <option value="7">Volunteer</option>
     </select>
@@ -122,13 +150,16 @@ input[type=text]:focus {
     </select>
     <br>
     <label for="capital-gain">Capital Gain </label>
-    <input type="text" id="capital-gain" name="capital-gain">Between:[0-99999]
+
+    <input type="number" id="capital-gain" name="capital-gain" min="0" max="99999" required>
     <br>
     <label for="capital-loss">Capital Loss </label>
-    <input type="text" id="capital-loss" name="capital-loss">Between:[0-4356]
+
+    <input type="number" id="capital-loss" name="capital-loss" min="0" max="4356" required>
     <br>
     <label for="hours-per-week">Hours per Week </label>
-    <input type="text" id="hours-per-week" name="hours-per-week">Between:[1-99]
+
+    <input type="number" id="hours-per-week" name="hours-per-week" min="0" max="100" required>
     <br>
     <label for="native-country">Native Country</label>
     <select id="native-country" name="native-country">
